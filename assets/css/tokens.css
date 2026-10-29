@@ -1,0 +1,111 @@
+/* =========================================================
+   Mobilní učebna KONEKT-ED – design tokeny webu
+   Zdroj: Nabídka inovačních vzdělávacích workshopů (PDF),
+   diplomy, nálepky, Tým, Letní program.
+   Hodnoty označené „odvozeno“ nejsou v podkladech přímo,
+   ale jsou dopočítané z hlavní palety (odstíny, text).
+   ========================================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400&family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+:root {
+  /* --- Levandulová (primární barva projektu) --- */
+  --lav-50:  #F4F4F9;   /* odvozeno – podklad sekcí */
+  --lav-100: #E7E7F2;   /* odvozeno – jemné plochy, rámečky */
+  --lav-200: #D1D1E5;   /* metodiky – tabulky */
+  --lav-300: #A9A9D0;   /* odvozeno */
+  --lav-500: #7777B0;   /* hlavní levandulová – plochy, pozadí */
+  --lav-600: #626298;   /* organické tvary na levandulové */
+  --lav-700: #5A5A8F;   /* tmavší levandulová – text na bílé, hover */
+  --lav-800: #4E4E81;   /* indigo – tečkový rastr, text na žluté */
+  --lav-900: #2E2D52;   /* odvozeno – hlavní barva textu */
+
+  /* --- Slunečná žlutá (sekundární, energie, výzvy k akci) --- */
+  --sun-200: #FFDD6D;   /* světlá žlutá – diplomy */
+  --sun-400: #FED711;   /* hlavní žlutá – plochy, tlačítka, kruhové lemy */
+  --sun-500: #FEBC11;   /* sytější žlutá – organické tvary na žluté */
+  --sun-600: #E4AE19;   /* zlatá – hover, stíny tvarů */
+
+  /* --- Oranžová a krémová (hravá linie: diplomy, nálepky, maskot) --- */
+  --orange-500: #FFAC28;
+  --orange-600: #F59A0F; /* odvozeno – hover */
+  --cream:      #FBF4E5;
+  --cream-2:    #FEF3E1;
+
+  /* --- Doplňkové akcenty --- */
+  --violet-500: #8C52FF; /* Letní program – výrazný akcent, střídmě */
+  --mint-300:   #93D8B9; /* logo partnera SMO VM – příroda, terén */
+
+  /* --- Povinná publicita (neměnit) --- */
+  --eu-blue:    #003399;
+
+  /* --- Neutrální --- */
+  --white:   #FFFFFF;
+  --paper:   #F8F8F8;   /* papír brožury */
+  --gray-200:#E6E6EC;   /* odvozeno */
+  --gray-500:#6E6D85;   /* odvozeno – vedlejší text */
+  --black:   #010103;
+
+  /* --- Sémantické role --- */
+  --color-text:        var(--lav-900);
+  --color-text-muted:  var(--gray-500);
+  --color-heading:     var(--lav-800);
+  --color-bg:          var(--white);
+  --color-bg-soft:     var(--lav-50);
+  --color-primary:     var(--lav-500);
+  --color-primary-ink: var(--lav-700);
+  --color-accent:      var(--sun-400);
+  --color-accent-ink:  var(--lav-800);
+  --color-link:        var(--lav-700);
+  --color-focus:       var(--violet-500);
+
+  /* --- Typografie --- */
+  --font-display: 'Poppins', system-ui, sans-serif;
+  --font-body:    'Open Sans', system-ui, sans-serif;
+
+  --fs-display: clamp(2.75rem, 1.6rem + 5.2vw, 5.5rem);
+  --fs-h1:      clamp(2.25rem, 1.5rem + 3.2vw, 3.75rem);
+  --fs-h2:      clamp(1.75rem, 1.3rem + 1.9vw, 2.625rem);
+  --fs-h3:      clamp(1.25rem, 1.1rem + 0.6vw, 1.5rem);
+  --fs-h4:      1.125rem;
+  --fs-lead:    clamp(1.0625rem, 1rem + 0.3vw, 1.25rem);
+  --fs-body:    1.0625rem;
+  --fs-small:   0.875rem;
+  --fs-caps:    0.8125rem;
+
+  --tracking-display: 0.08em; /* široké proložení – „DIGITÁLNÍ BADATEL“ */
+  --tracking-caps:    0.04em;
+
+  --lh-tight: 1.05;
+  --lh-head:  1.2;
+  --lh-body:  1.65;
+
+  /* --- Prostor a rozvržení --- */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2rem;
+  --space-7: 3rem;
+  --space-8: 4rem;
+  --space-9: 6rem;
+  --space-section: clamp(4rem, 2.5rem + 6vw, 8rem);
+
+  --container: 1240px;
+  --gutter: clamp(1rem, 0.5rem + 2.5vw, 2.5rem);
+
+  /* --- Tvary --- */
+  --radius-s: 10px;
+  --radius-m: 18px;
+  --radius-l: 28px;
+  --radius-pill: 999px;
+
+  --ring-inner: 10px;   /* bílý mezikruh kolem kruhové fotky */
+  --ring-outer: 8px;    /* žlutý lem */
+
+  --shadow-card: 0 1px 2px rgb(46 45 82 / 0.06), 0 8px 24px rgb(46 45 82 / 0.08);
+  --shadow-lift: 0 2px 4px rgb(46 45 82 / 0.08), 0 18px 40px rgb(46 45 82 / 0.14);
+
+  --ease: cubic-bezier(.2, .7, .2, 1);
+}
