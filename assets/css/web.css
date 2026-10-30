@@ -235,6 +235,62 @@ body { overflow-x: hidden; }
 .disclosure__body { padding: 0 var(--space-6) var(--space-6); }
 .disclosure .event { box-shadow: none; border: 1px solid var(--gray-200); }
 
+/* ---------- Úvod pro učitele (verze 2) ---------- */
+.hero__title { font-family: var(--font-display); font-weight: 700; color: var(--white); font-size: clamp(2.2rem, 1.4rem + 3.2vw, 3.9rem); line-height: 1.08; margin: 0; letter-spacing: -.005em; }
+.hero__title span { color: var(--sun-400); }
+.hero__identity { display: flex; flex-wrap: wrap; gap: var(--space-2); }
+.hero__identity .tag { background: rgb(255 255 255 / .16); color: var(--white); }
+.hero__identity .tag b { color: var(--sun-200); }
+
+/* Situace ze škol → program */
+.situations { display: grid; gap: var(--space-4); }
+@media (min-width: 700px) { .situations { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 1100px) { .situations { grid-template-columns: repeat(3, 1fr); } }
+.situation { display: flex; flex-direction: column; gap: var(--space-3); padding: var(--space-5); border-radius: var(--radius-l); background: var(--white); box-shadow: var(--shadow-card); text-decoration: none; color: inherit; transition: transform .25s var(--ease), box-shadow .25s var(--ease); }
+.situation:hover { transform: translateY(-3px); box-shadow: var(--shadow-lift); }
+.situation__q { position: relative; padding-left: 52px; font-family: var(--font-display); font-weight: 600; color: var(--lav-800); line-height: 1.35; margin: 0; }
+.situation__q svg { position: absolute; left: 0; top: -2px; width: 40px; height: 32px; }
+.situation__a { margin: 0; font-size: .95rem; }
+.situation__link { margin-top: auto; font-family: var(--font-display); font-weight: 600; font-size: .9rem; color: var(--lav-700); }
+.situation__link b { color: var(--lav-900); }
+
+/* Předměty na kartě programu a v detailu */
+.activity-card__subjects { margin: 0; font-size: .85rem; color: var(--gray-500); }
+.activity-card__subjects b { color: var(--lav-700); font-weight: 600; }
+.subjects { display: grid; gap: var(--space-4); }
+@media (min-width: 640px) { .subjects { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 1000px) { .subjects { grid-template-columns: repeat(4, 1fr); } }
+.subject { padding: var(--space-5); border-radius: var(--radius-l); background: var(--white); border: 1px solid var(--gray-200); }
+.subject h3 { font-size: 1.05rem; margin-bottom: var(--space-3); }
+.subject ul { margin: 0; padding-left: 1.1em; font-size: .93rem; }
+.subject li { margin-bottom: var(--space-1); }
+
+/* Stav (připravujeme) */
+.status { display: inline-flex; align-items: center; gap: .5em; padding: .35em .9em; border-radius: var(--radius-pill); background: var(--white); color: var(--orange-600); font-family: var(--font-display); font-weight: 700; font-size: .8rem; text-transform: uppercase; letter-spacing: .04em; border: 2px solid var(--orange-500); }
+.status::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: var(--orange-500); }
+
+/* Česko-slovenská spolupráce */
+.coop { display: grid; gap: var(--space-5); align-items: stretch; }
+@media (min-width: 960px) { .coop { grid-template-columns: 1fr 1.15fr 1fr; } }
+.coop__side { background: rgb(255 255 255 / .1); border: 1px solid rgb(255 255 255 / .18); border-radius: var(--radius-l); padding: var(--space-6); }
+.coop__side .tag { background: var(--sun-400); color: var(--lav-900); margin-bottom: var(--space-4); }
+.coop__side h3 { margin-bottom: var(--space-2); }
+.coop__side p { margin: 0 0 var(--space-3); opacity: .92; }
+.coop__side ul { margin: 0; padding-left: 1.1em; opacity: .92; }
+.coop__center { background: var(--sun-400); color: var(--lav-900); border-radius: var(--radius-l); padding: var(--space-6); display: flex; flex-direction: column; gap: var(--space-3); }
+.coop__center h3 { color: var(--lav-900); margin: 0; }
+.coop__center .checklist li::before { background-color: var(--white); }
+
+/* Partneři a financování */
+.funding { display: grid; gap: var(--space-6); align-items: center; }
+@media (min-width: 960px) { .funding { grid-template-columns: 1.1fr 1fr; } }
+.funding__logos { display: flex; flex-wrap: wrap; align-items: center; gap: var(--space-5) var(--space-7); }
+.funding__logos img { height: 52px; width: auto; }
+.funding__logos .publicity__interreg { height: auto; width: 484px; max-width: 100%; }
+
+/* ozdobné tvary pravé (žluté) poloviny nesmí na mobilu přesahovat do levé */
+.hero__right, .activity-hero__right { overflow: hidden; }
+
 /* Maskot místo kruhové fotky v úvodu */
 .hero__robot { width: min(380px, 70vw); height: auto; filter: drop-shadow(0 24px 30px rgb(78 78 129 / .28)); }
 .gallery--wide { grid-template-columns: repeat(2, 1fr); }
